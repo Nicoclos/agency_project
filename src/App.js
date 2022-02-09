@@ -6,7 +6,8 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from "./components/Home"
 import Navbar from "./components/Navbar/index";
 import About from "./components/About/index";
-
+import Philosophe from "./components/Philosophe/"
+import Profil from "./components/Profil/";
 
 const App = ()=> {
   const [checked, setChecked] = useState(localStorage.getItem("theme") === "dark" ? true : false);
@@ -39,16 +40,16 @@ const App = ()=> {
 
   return (
     <div>
-
-        <header className="App-header">
+      <header className="App-header">
           <BrowserRouter>
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />}  />
               <Route path="/about" element={<About />}  />
+              <Route path="/philosophe" element={<Philosophe />} />
+              <Route path="/philosophe/:name" element={<Profil />} />
             </Routes>
           </BrowserRouter>
-       
           <p>Click the switch to toggle themes</p>
           <label>
             <input
@@ -57,7 +58,7 @@ const App = ()=> {
               onChange={() => toggleThemeChange()}
             />
           </label>
-        </header>
+      </header>
 
     </div>
 
