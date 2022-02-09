@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
 import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
+import 'antd/dist/antd.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from "./components/Home"
 
