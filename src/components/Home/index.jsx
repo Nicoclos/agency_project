@@ -3,8 +3,7 @@ import React from "react";
  const Home = () =>{
   return (
     <div>
-      <Link to="/">Home</Link> 
-      <p>test</p>
+        
     </div>
   );
 }

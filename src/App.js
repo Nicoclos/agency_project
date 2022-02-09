@@ -1,27 +1,46 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import "./App.css";
-import styled, { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
+
 import 'antd/dist/antd.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from "./components/Home"
 import Navbar from "./components/Navbar/Navbar";
 
-const StyledApp = styled.div`
-  color: ${(props) => props.theme.fontColor};
-`;
+
 
 const App = ()=> {
-  const [theme, setTheme] = useState("light");
+  const [checked, setChecked] = useState(localStorage.getItem("theme") === "dark" ? true : false);
 
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
+  /**
+   * Everytime checked changes, update the property data-theme in the
+   * HTML so it uses the theme we have in localStorage
+   */
+  useEffect(() => {
+    document
+      .getElementsByTagName("HTML")[0]
+      .setAttribute("data-theme", localStorage.getItem("theme"));
+  }, [checked]);
+
+  /**
+   * Update the state of checked and the content of our theme object
+   * in localStorage based on the checkbox toggle
+   */
+  const toggleThemeChange = () => {
+    if (checked === false) {
+      localStorage.setItem("theme", "dark");
+      
+      setChecked(true);
+    } else {
+      localStorage.setItem("theme", "light");
+
+      setChecked(false);
+    }
+  }
 
   return (
-   
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-    
+    <div>
+        
+        <header className="App-header">
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -29,12 +48,17 @@ const App = ()=> {
 
           </Routes>
         </BrowserRouter>
-          <GlobalStyles />
-          <StyledApp>
-            <button onClick={() => themeToggler()}>Change Theme</button>
-          </StyledApp>
-   </ThemeProvider> 
-    
+       
+        <p>Click the switch to toggle themes</p>
+        <label>
+          <input
+            type="checkbox"
+            defaultChecked={checked}
+            onChange={() => toggleThemeChange()}
+          />
+        </label>
+      </header>
+    </div>
   );
 }
 
