@@ -4,8 +4,8 @@ import "./App.css";
 import 'antd/dist/antd.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from "./components/Home"
-import Navbar from "./components/Navbar/Navbar";
-
+import Navbar from "./components/Navbar/index";
+import About from "./components/About/index";
 
 
 const App = ()=> {
@@ -39,26 +39,28 @@ const App = ()=> {
 
   return (
     <div>
-        
-        <header className="App-header">
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-          <Route path="/" element={<Home />}  />
 
-          </Routes>
-        </BrowserRouter>
+        <header className="App-header">
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />}  />
+              <Route path="/about" element={<About />}  />
+            </Routes>
+          </BrowserRouter>
        
-        <p>Click the switch to toggle themes</p>
-        <label>
-          <input
-            type="checkbox"
-            defaultChecked={checked}
-            onChange={() => toggleThemeChange()}
-          />
-        </label>
-      </header>
+          <p>Click the switch to toggle themes</p>
+          <label>
+            <input
+              type="checkbox"
+              defaultChecked={checked}
+              onChange={() => toggleThemeChange()}
+            />
+          </label>
+        </header>
+
     </div>
+
   );
 }
 

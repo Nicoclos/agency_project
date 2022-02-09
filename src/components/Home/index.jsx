@@ -1,6 +1,6 @@
-// import {Link} from "react-router-dom";
 import React from "react";
- const Home = () =>{
+
+const Home = () =>{
   return (
     <div>
         
