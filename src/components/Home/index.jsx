@@ -2,8 +2,10 @@
 import React from "react";
  const Home = () =>{
   return (
-    // <Link to="/">Home</Link> 
-    <p>test</p>
+    <div>
+      <Link to="/">Home</Link> 
+      <p>test</p>
+    </div>
   );
 }
 export default Home;
