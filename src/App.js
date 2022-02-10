@@ -1,5 +1,5 @@
 import React, {useEffect, useState } from "react";
-import "./App.css";
+// import "./App.css";
 
 import 'antd/dist/antd.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
@@ -9,6 +9,7 @@ import About from "./components/About/index";
 import Philosophe from "./components/Philosophe/"
 import Profil from "./components/Profil/";
 
+import "./App.css"
 const App = ()=> {
   const [checked, setChecked] = useState(localStorage.getItem("theme") === "dark" ? true : false);
 
@@ -51,6 +52,7 @@ const App = ()=> {
             </Routes>
           </BrowserRouter>
           <p>Click the switch to toggle themes</p>
+      
           <label>
             <input
               type="checkbox"
