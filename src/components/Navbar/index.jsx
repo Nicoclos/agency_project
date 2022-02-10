@@ -7,7 +7,7 @@ const Navbars = () => {
         <div>
             <ul class="flex">
   <li class="mr-6">
-  <Link class="text-blue-500 hover:text-blue-800"  to="/about">Notre Agence</Link>
+  <Link class="text-blue-500 hover:text-blue-800"  to="/">Notre Agence</Link>
 
   </li>
   <li class="mr-6">
