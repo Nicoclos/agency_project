@@ -4,10 +4,12 @@
 html {
   --primary-color: #282c34;
   --secondary-color: #fff;
+  section : #fff;
 }
 
 /* Color variables if the theme is dark */
 html[data-theme="dark"] {
+  
   --primary-color: #fff;
   --secondary-color: #282c34;
   

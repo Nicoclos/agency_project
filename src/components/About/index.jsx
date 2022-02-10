@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
     return (
         <div>
-            <div class="lg py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+            <div class="lg py-4 px-8 bg-white shadow-lg rounded-lg my-20 bg-blue-500 ">
  
   
             <p>Websitic est une Agence de communication digitale à paris ayant pour mission de vous accompagner sur vos projets digitaux.</p>

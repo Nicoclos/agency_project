@@ -23,7 +23,7 @@ if (!currentPhilo){
 return (
     
   <div>
-     <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+     <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 bg-blue-500">
  
   
     <h2 class="text-gray-800 text-3xl font-semibold">{name}</h2>

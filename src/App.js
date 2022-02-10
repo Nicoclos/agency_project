@@ -54,11 +54,13 @@ const App = ()=> {
           <p>Click the switch to toggle themes</p>
       
           <label>
-            <input
+          <input
               type="checkbox"
               defaultChecked={checked}
               onChange={() => toggleThemeChange()}
             />
+
+
           </label>
       </header>
 
