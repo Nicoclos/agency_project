@@ -14,7 +14,7 @@ const Navbars = () => {
   <Link class="text-blue-500 hover:text-blue-800"  to="/about">Notre Agence</Link>
   </li>
   <li class="mr-6">
-  <Link class="text-blue-500 hover:text-blue-800" to="/philosophe"> voici nos philosophe</Link>
+  <Link class="text-blue-500 hover:text-blue-800" to="/works">Nos Projets</Link>
   </li>
   
 </ul>
