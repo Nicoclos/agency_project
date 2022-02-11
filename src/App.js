@@ -48,7 +48,7 @@ const App = ()=> {
               <Route path="/" element={<Home />}  />
               <Route path="/about" element={<About />}  />
               <Route path="/works" element={<Philosophe />} />
-              <Route path="/works/:name" element={<Profil />} />
+              <Route path="/works/:name-study-case" element={<Profil />} />
             </Routes>
           </BrowserRouter>
           <p>Click the switch to toggle themes</p>
